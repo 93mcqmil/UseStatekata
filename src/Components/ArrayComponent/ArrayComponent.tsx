@@ -1,4 +1,4 @@
-import CLAASMATES from "./Data/Data.json";
+import CLAASMATES from "../Data/Data.json";
 import "./ArrayComponent.css";
 import { useState } from "react";
 

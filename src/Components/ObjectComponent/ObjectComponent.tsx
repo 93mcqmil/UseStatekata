@@ -1,11 +1,12 @@
 import { useState } from "react";
 import "./ObjectComponent.css";
+import Nationality from "../Data/Nationality.json";
 
 function ObjectComponent() {
   const [form, setForm] = useState({
     name: "",
     age: "",
-    nationality: "",
+    Nationality: "",
   });
 
   const onChangeName = (event: { target: { value: any } }) => {
@@ -20,11 +21,11 @@ function ObjectComponent() {
   };
   const onChangeNationality = (event: { target: { value: any } }) => {
     setForm((currentState) => {
-      return { ...currentState, nationality: event.target.value };
+      return { ...currentState, Nationality: event.target.value };
     });
   };
 
-  const onSubmit = (event) => {
+  const onSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
     alert(JSON.stringify(form, null, 4));
   };
@@ -46,10 +47,9 @@ function ObjectComponent() {
           <label>Nationality </label>
           <select onChange={onChangeNationality} value={form.nationality}>
             <option value=''>--Select--</option>
-            <option value='American'>American</option>
-            <option value='Chinese'>Chinese</option>
-            <option value='Indian'>Indian</option>
-            <option value='Italian'>Italian</option>
+            {Nationality.map((nation, index) => (
+              <option value=''>{nation}</option>
+            ))}
           </select>
         </div>
         <button onClick={onSubmit} className='btn-primary'>
