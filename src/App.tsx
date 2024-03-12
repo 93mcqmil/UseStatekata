@@ -8,7 +8,7 @@ import ObjectComponent from "./Components/ObjectComponent/ObjectComponent";
 function App() {
   return (
     <>
-      <MyCounter />
+      {/* <MyCounter /> */}
       {/* <TextComponent /> */}
       {/* <ArrayComponent /> */}
       {/* <ObjectComponent /> */}

@@ -45,7 +45,7 @@ function ObjectComponent() {
         </div>
         <div>
           <label>Nationality </label>
-          <select onChange={onChangeNationality} value={form.nationality}>
+          <select onChange={onChangeNationality} value={form.Nationality}>
             <option value=''>--Select--</option>
             {Nationality.map((nation, index) => (
               <option value=''>{nation}</option>
