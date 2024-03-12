@@ -21,7 +21,7 @@ function MyCounter() {
       setCounter((currentCounter) => {
         return currentCounter - 1;
       });
-    }, 1000);
+    });
   };
 
   return (
